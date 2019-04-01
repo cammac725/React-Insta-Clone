@@ -1,18 +1,31 @@
-import React, { Component } from 'react';
+import React from 'react';
+import CommentSection from '../CommentSection/CommentSection';
 
-class PostContainer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+const PostContainer = props => {
+  console.log('posts', props)
+  return (
 
-    }
-  }
+    <div>
+      {props.posts.map(item => (
+        <div key={item.timestamp}>
+          <header>
+            <img src={item.thumbnail} alt='thumbnail' />
+          </header>
 
-  render() {
-    return (
-      <h1>Post Container</h1>
-    )
-  }
+          <img src={item.imageUrl} alt='full-size' />
+
+          <div className='likes'>
+            <p>{item.likes} likes</p>
+          </div>
+
+          <div>
+            <CommentSection comments={item.comments} />
+          </div>
+
+        </div>
+      ))}
+    </div >
+  )
 }
 
 export default PostContainer;
