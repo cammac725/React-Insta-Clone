@@ -1,0 +1,33 @@
+.post-wrapper {
+  max-width: 640px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid #88292F;
+  background: #a2a79e;
+  border-radius: 5px;
+  box-shadow: 5px 10px 30px;
+  margin: 0 auto;
+}
+
+.post-wrapper .main-img {
+  width: 100%;
+}
+
+.post-wrapper header {
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  width: 30px;
+  height: 30px;
+  margin: 20px 20px;
+}
+
+header p {
+  margin-top: 12px;
+  font-weight: 600px;
+}

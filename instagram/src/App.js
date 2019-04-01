@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div>
+        <div className='search-bar'>
           <SearchBar />
         </div>
 
