@@ -16,24 +16,8 @@
   width: 100%;
 }
 
-.post-wrapper header {
-  display: flex;
-  align-items: center;
-}
-
 .post {
   border-bottom: 1px solid #88292F;
-}
-
-header img {
-  width: 30px;
-  height: 30px;
-  margin: 20px 20px;
-}
-
-header p {
-  margin-top: 12px;
-  font-weight: 600px;
 }
 
 .likes {

@@ -1,6 +1,10 @@
 import React from 'react';
 import './SearchBar.css';
 
+// ========================
+//    Component
+// ========================
+
 const SearchBar = props => {
   return (
     <nav className='navbar navbar-light bg-light'>
@@ -14,6 +18,7 @@ const SearchBar = props => {
           className='form-control mr-sm-2'
           type='text'
           placeholder='Search'
+          onKeyDown={props.searchPosts}
         />
       </form>
 
