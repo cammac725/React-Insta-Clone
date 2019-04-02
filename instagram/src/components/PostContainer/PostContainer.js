@@ -1,5 +1,6 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
+import Likes from './Likes';
 import './PostContainer.css';
 import PropTypes from 'prop-types';
 
@@ -9,7 +10,7 @@ const PostContainer = props => {
 
     <div className='post-wrapper'>
       {props.posts.map(item => (
-        <div key={item.timestamp}>
+        <div className='post' key={item.timestamp}>
           <header>
             <img src={item.thumbnailUrl} alt='thumbnail' />
             <p>{item.username}</p>
@@ -18,12 +19,10 @@ const PostContainer = props => {
           <img className='main-img' src={item.imageUrl} alt='full-size' />
 
           <div className='likes'>
-            <i className="far fa-heart"></i>
-            <i className="far fa-comment"></i>
-            <p>{item.likes} likes</p>
+            <Likes likes={item.likes} />
           </div>
 
-          <div>
+          <div className='bottom'>
             <CommentSection comments={item.comments} />
           </div>
 

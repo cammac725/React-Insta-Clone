@@ -1,7 +1,9 @@
 .navbar {
+  width: 800px;
   display: flex;
   justify-content: space-between;
-  margin: 0 50px 30px 50px;
+  margin: 0 20px 30px 20px;
+  border: 1px solid #88292F;
 }
 
 .nav-left {
@@ -19,6 +21,10 @@
 
 .nav-left i {
   font-size: 2.8rem;
+}
+
+.navbar .form-inline input:focus {
+  outline: none;
 }
 
 .nav-right i {

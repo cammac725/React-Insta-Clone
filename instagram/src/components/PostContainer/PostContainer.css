@@ -21,6 +21,10 @@
   align-items: center;
 }
 
+.post {
+  border-bottom: 1px solid #88292F;
+}
+
 header img {
   width: 30px;
   height: 30px;
@@ -30,4 +34,19 @@ header img {
 header p {
   margin-top: 12px;
   font-weight: 600px;
+}
+
+.likes {
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px 20px;
+}
+
+.likes i {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.bottom {
+  padding-bottom: 20px;
 }
