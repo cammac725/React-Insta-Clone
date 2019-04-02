@@ -6,17 +6,24 @@
 }
 
 .comment-wrapper form {
-  margin-top: 10px;
+  margin-top: 20px;
   width: 100%;
 }
 
-.comment-wrapper input {
+.comment-wrapper .form-control {
   background-color: #88292F;
+  border: none;
+  height: 45px;
+}
+
+.comment-wrapper ::placeholder {
   color: white;
 }
 
 .comment-wrapper input:focus {
   outline: none;
+  color: #88292F;
+  background: white;
 }
 
 .comment {

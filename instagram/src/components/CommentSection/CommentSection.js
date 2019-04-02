@@ -20,11 +20,9 @@ class CommentSection extends React.Component {
     e.preventDefault();
     const newComment = {
       id: Date.now(),
-      username: 'Cam',
+      username: 'cam',
       text: this.state.comment
     }
-    // const copiedComments = [...this.state.Comments];
-    // copiedComments.push(newComment);
     this.setState({
       Comments: [...this.state.Comments, newComment],
       comment: ''

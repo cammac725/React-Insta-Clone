@@ -5,10 +5,6 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  border: 2px solid #88292F;
-  background: #a2a79e;
-  border-radius: 5px;
-  box-shadow: 5px 10px 30px;
   margin: 0 auto;
 }
 
@@ -17,7 +13,11 @@
 }
 
 .post {
-  border-bottom: 1px solid #88292F;
+  border: 2px solid #88292F;
+  background: #a2a79e;
+  border-radius: 5px;
+  box-shadow: 5px 10px 30px;
+  margin-bottom: 30px;
 }
 
 .likes {
@@ -29,8 +29,4 @@
 .likes i {
   font-size: 1.5rem;
   margin-right: 10px;
-}
-
-.bottom {
-  padding-bottom: 20px;
 }
