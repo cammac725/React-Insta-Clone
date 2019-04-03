@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
+
 import './App.css';
 import dummyData from './dummy-data';
-import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
+import PostsPage from './components/PostContainer/PostsPage';
+import withAuthenticate from './components/authentication/withAuthenticate';
 
 // =========================
 //    Component
 // =========================
+
 
 class App extends Component {
   constructor() {
@@ -31,20 +33,19 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className='search-bar'>
-          <SearchBar searchPosts={this.searchHandler} />
-        </div>
-
-        <div>
-          <PostContainer
-            posts={this.state.filteredPosts.length > 0
-              ? this.state.filteredPosts
-              : this.state.data} />
-        </div>
-
+        <Authentication
+          searchPosts={this.searchHandler}
+          posts={this.state.filteredPosts.length > 0
+            ? this.state.filteredPosts
+            : this.state.data
+          }
+        />
       </div>
     );
   }
 }
+
+const Authentication = withAuthenticate(PostsPage);
+
 
 export default App;
