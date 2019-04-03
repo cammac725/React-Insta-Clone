@@ -20,7 +20,7 @@ class CommentSection extends React.Component {
     e.preventDefault();
     const newComment = {
       id: Date.now(),
-      username: 'cam',
+      username: localStorage.getItem('user'),
       text: this.state.comment
     }
     this.setState({

@@ -1,14 +1,26 @@
 import React, { Component } from 'react';
 
-import './App.css';
 import dummyData from './dummy-data';
 import PostsPage from './components/PostContainer/PostsPage';
 import withAuthenticate from './components/authentication/withAuthenticate';
+import Login from './components/Login/Login';
+import styled from 'styled-components';
+
+// =========================
+//   Styled Components
+// =========================
+
+const AppDiv = styled.div`
+  text-align: center;
+  background-color:  #A77464;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 // =========================
 //    Component
 // =========================
-
 
 class App extends Component {
   constructor() {
@@ -32,7 +44,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <AppDiv>
         <Authentication
           searchPosts={this.searchHandler}
           posts={this.state.filteredPosts.length > 0
@@ -40,12 +52,12 @@ class App extends Component {
             : this.state.data
           }
         />
-      </div>
+      </AppDiv>
     );
   }
 }
 
-const Authentication = withAuthenticate(PostsPage);
+const Authentication = withAuthenticate(PostsPage)(Login);
 
 
 export default App;
