@@ -23,8 +23,8 @@ class Login extends React.Component {
   }
 
   handleLogin = () => {
-    const user = this.state.username;
-    localStorage.setItem('user', user);
+    // const user = this.state.username;
+    localStorage.setItem('user', this.state.username);
     window.location.reload();
   }
 

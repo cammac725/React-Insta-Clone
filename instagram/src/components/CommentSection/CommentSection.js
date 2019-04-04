@@ -11,7 +11,7 @@ class CommentSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      Comments: this.props.comments,
+      comments: this.props.comments,
       comment: ''
     }
   }
@@ -24,7 +24,7 @@ class CommentSection extends React.Component {
       text: this.state.comment
     }
     this.setState({
-      Comments: [...this.state.Comments, newComment],
+      comments: [...this.state.comments, newComment],
       comment: ''
     })
   }
@@ -38,7 +38,7 @@ class CommentSection extends React.Component {
   render() {
     return (
       <CommentWrapper>
-        {this.state.Comments.map((item, index) => (
+        {this.state.comments.map((item, index) => (
           <Comment username={item.username} key={index} text={item.text} />
         ))}
 
