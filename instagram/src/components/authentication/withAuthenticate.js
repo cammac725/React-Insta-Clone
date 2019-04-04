@@ -21,12 +21,18 @@ const withAuthenticate = PostsPage => Login =>
       }
     }
 
+    handleLogout = () => {
+      localStorage.removeItem('user');
+      this.setState({ isLoggedIn: false })
+    }
+
     render() {
       if (this.state.isLoggedIn) {
         return (
           <PostsPage
             posts={this.props.posts}
             searchPosts={this.props.searchPosts}
+            handleLogout={this.handleLogout}
           />
         )
       } else {
