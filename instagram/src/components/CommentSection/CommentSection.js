@@ -1,10 +1,10 @@
 import React from 'react';
 import Comment from './Comment';
 import PropTypes from 'prop-types';
-import './CommentSection.css';
+import { CommentWrapper } from '../Styles';
 
 // ===========================
-//     Component
+//        Component
 // ===========================
 
 class CommentSection extends React.Component {
@@ -37,14 +37,17 @@ class CommentSection extends React.Component {
 
   render() {
     return (
-      <div className='comment-wrapper'>
+      <CommentWrapper>
         {this.state.Comments.map((item, index) => (
           <Comment username={item.username} key={index} text={item.text} />
         ))}
 
-        <form onSubmit={this.addNewComment}>
+        <form
+          onSubmit={this.addNewComment}
+          className='comment-form'
+        >
           <input
-            className='form-control'
+            className='comment-input form-control'
             type='text'
             name='comment'
             value={this.state.comment}
@@ -52,8 +55,7 @@ class CommentSection extends React.Component {
             onChange={this.handleChanges}
           />
         </form>
-
-      </div>
+      </CommentWrapper>
     )
   }
 }

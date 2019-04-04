@@ -1,14 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './CommentSection.css';
+import styled from 'styled-components';
+import { CommentDiv } from '../Styles';
+
+// ======================
+//      Components
+// ======================
 
 const Comment = props => {
   return (
-    <div className='comment'>
-      <p><strong>{props.username}</strong>  {props.text}</p>
-    </div>
+    <CommentDiv>
+      <p className='comment-text'><strong>{props.username}</strong>  {props.text}</p>
+    </CommentDiv>
   )
 }
+
+// ======================
+//    Prop Types
+// ======================
 
 Comment.propTypes = {
   comment: PropTypes.shape({

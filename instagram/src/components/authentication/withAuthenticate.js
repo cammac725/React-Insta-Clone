@@ -1,5 +1,9 @@
 import React from 'react';
 
+// ========================
+//      Components
+// ========================
+
 const withAuthenticate = PostsPage => Login =>
   class extends React.Component {
     constructor() {

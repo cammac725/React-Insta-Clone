@@ -1,13 +1,13 @@
 import React from 'react';
-import './SearchBar.css';
+import { NavBar } from '../Styles';
 
 // ========================
-//    Component
+//       Components
 // ========================
 
 const SearchBar = props => {
   return (
-    <nav className='navbar navbar-light bg-light'>
+    <NavBar className='navbar navbar-light bg-light'>
       <div className='nav-left'>
         <i className='fab fa-instagram'></i>
         <p>Insta-Cam</p>
@@ -26,10 +26,13 @@ const SearchBar = props => {
         <i className="far fa-compass"></i>
         <i className="far fa-heart"></i>
         <i className="far fa-user"></i>
-        <i className="fas fa-sign-out-alt"></i>
+        <i
+          className="fas fa-sign-out-alt"
+          onClick={props.handleLogout}>
+        </i>
       </div>
 
-    </nav>
+    </NavBar>
   )
 }
 

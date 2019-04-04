@@ -4,19 +4,7 @@ import dummyData from './dummy-data';
 import PostsPage from './components/PostContainer/PostsPage';
 import withAuthenticate from './components/authentication/withAuthenticate';
 import Login from './components/Login/Login';
-import styled from 'styled-components';
-
-// =========================
-//   Styled Components
-// =========================
-
-const AppDiv = styled.div`
-  text-align: center;
-  background-color:  #A77464;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
+import { AppDiv } from './components/Styles';
 
 // =========================
 //    Component

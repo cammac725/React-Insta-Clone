@@ -2,29 +2,31 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import Likes from './Likes';
 import Header from './Header';
-import './PostContainer.css';
 import PropTypes from 'prop-types';
+import { PostWrapperDiv } from '../Styles';
+import { PostDiv } from '../Styles';
+import { LikesDiv } from '../Styles';
 
 // =========================
-//    Component
+//       Components
 // =========================
 
 const PostContainer = props => {
   return (
-    <div className='post-wrapper'>
+    <PostWrapperDiv>
       {props.posts.map(item => (
-        <div className='post' key={item.timestamp}>
+        <PostDiv key={item.timestamp}>
           <Header thumbnail={item.thumbnailUrl} username={item.username} />
           <img className='main-img' src={item.imageUrl} alt='full-size' />
-          <div className='likes'>
+          <LikesDiv>
             <Likes likes={item.likes} />
-          </div>
-          <div className='bottom'>
+          </LikesDiv>
+          <div>
             <CommentSection comments={item.comments} />
           </div>
-        </div>
+        </PostDiv>
       ))}
-    </div>
+    </PostWrapperDiv>
   )
 }
 

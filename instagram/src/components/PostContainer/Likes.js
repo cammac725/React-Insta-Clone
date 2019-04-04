@@ -1,5 +1,10 @@
 import React from 'react';
 
+// =======================
+//      Components
+// =======================
+
+
 class Likes extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +29,6 @@ class Likes extends React.Component {
       </div>
     )
   }
-
 }
 
 export default Likes;

@@ -1,16 +1,17 @@
 import React from 'react';
-import './Header.css';
+import styled from 'styled-components';
+import { HeaderDiv } from '../Styles';
 
 // =======================
-//    Component
+//      Components
 // =======================
 
 const Header = props => {
   return (
-    <div className='header'>
-      <img src={props.thumbnail} alt='thumbnail' />
-      <p>{props.username}</p>
-    </div>
+    <HeaderDiv>
+      <img className='thumb-img' src={props.thumbnail} alt='thumbnail' />
+      <p className='header-text'>{props.username}</p>
+    </HeaderDiv>
   )
 }
 
