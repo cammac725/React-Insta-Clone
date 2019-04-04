@@ -30,7 +30,7 @@ class App extends Component {
     // )
 
     let options = {
-      threshold: 0.6,
+      threshold: 0.8,
       location: 0,
       distance: 10,
       keys: [
@@ -40,8 +40,7 @@ class App extends Component {
       ]
     }
     let fuse = new Fuse(this.state.data, options);
-    let result = fuse.search(e.target.value)
-    this.setState({ filteredPosts: result })
+    this.setState({ filteredPosts: fuse.search(e.target.value) })
   }
 
   render() {
